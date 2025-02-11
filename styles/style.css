@@ -1,38 +1,39 @@
 .edu{
-  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 /* marq */
-.main {
-  text-align: center;
-  width: 1200px;
-  margin-left: 200px;
-}
 .marq {
   color: white;
   background-color: #01ACFD;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 5px 0;
+  width: 100%;
+  text-align: center;
 }
 
 .geek1 {
-  font-size: 36px;
+  font-size: 14px;
   font-weight: bold;
   color: white;
-  padding-bottom: 10px;
+  
 }
 /* shared style */
 
 .display-flex{
     display: flex;
+    align-items: center;
 }
 /* nav */
 
 .nav-item{
     list-style: none;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .nav-links{
-    margin-left: 300px;
+    display: flex;
+    gap: 10px;
+
+    /* align-items: center; */
     
 }
 .nav-link{
@@ -41,36 +42,38 @@ font-weight: 500;
 
 }
 .navbar{
-    /* justify-content: space-between; */
-    width: 1440px;
-    height: 90pxspx;
+    justify-content: space-between;
+    display: flex;
     align-items: center;
-    margin-left: 200px;
-    padding: 20px 0px 20px 0px;
+    padding: 10px;
 
 }
+.size-6{
+  display: none;
+}
 .schl{
-    margin-right: 200px;
+    margin-right: auto;
 }
 
 /* button */
-.btn-primary{
+button{
+  cursor: pointer;
+}
+.btn-primary,
+.btn-secondary{
     color: white;
-    background-color: orange;
     border: none;
     border-radius: 12px;
     width: 197px;
     height: 50px;
     font-size: 1.2rem;
 }
+
+.btn-primary{
+  background-color: orange;
+}
 .btn-secondary{
-    color: white;
-    background-color: black;
-    border: none;
-    border-radius: 12px;
-    width: 197px;
-    height: 50px;
-    font-size: 1.2rem;
+  background-color: black;
 }
 .btn-1{
     color: skyblue;
@@ -91,13 +94,10 @@ font-weight: 500;
     color: white;
     background-color: orange;
     border: none;
-    padding: 20px;
+    padding: 15px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 2px 2px;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   
 }
 .butn{
@@ -105,15 +105,16 @@ font-weight: 500;
     justify-content: center; 
     align-items: center;    
     margin-top: 20px;
-    margin-left: 80px;
+    
 }
 
-/*  */
+/* banner */
 .boy{
+  display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
-    margin-left: 170px;
+    gap: 100px;
+    text-align: left;
 }
 #empowering{
     color: orange;
@@ -122,11 +123,12 @@ font-weight: 500;
 color: #01ACFD;
 }
 .title{
-    margin-top: 100px;
+    margin-top: 50px;
    
 }
 h1{
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 1.2;
 }
 
 /* card style */
@@ -134,20 +136,31 @@ h1{
     color: #808080;
 }
 .container{
-  margin-left: 140px;
-  border: 0.94px solid rgb(222, 245, 255);
+  display: flex;
+  justify-content: center;
+  gap:15px;
 }
 .card{
-    font-weight: 500;
+   
     width: 300px;
-  height: 320px;
-  
-   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06) ;
-   padding: 50px;
+  height: auto;
+  border-radius: 12px;
+   box-shadow: 0 4px  10px rgba(0, 0, 0, 0.1) ;
+   padding: 30px;
    justify-items: center;  
 }
-.cards{
-  background-image: url("bg");
+ /* card gradient */
+.card-1{
+  background: rgb(242,242,242);
+  background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(165,217,245,1) 100%);
+}
+.card-2{
+  background: rgb(242,242,242);
+background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(244,230,177,1) 100%);
+}
+.card-3{
+  background: rgb(242,242,242);
+background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(207,190,246,1) 100%);
 }
 .container, .sc{
     display: flex;
@@ -160,13 +173,16 @@ h1{
 }
 
 /* stories-section */
+.story{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap:20px;
+  padding: 20px;
+}
 .stories-section{
     max-width: 1200px;
-    margin: 0, auto;
-    text-align: center;
-    justify-content: center;
-align-items: center; 
-margin-left: 190px;   
+    margin: auto;
+    text-align: center;  
     
 }
 .stories-section h1 {
@@ -200,14 +216,21 @@ margin-left: 190px;
     grid-row: span 2;
     
   }
-  .story-card:hover {
-    transform: translateY(-5px);
-  }
   
-  .large{
+  
+  .card-01{
     width: 540px;
     height: 630px;
     position: relative;
+  }
+  .card-02{
+    width:290px ;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+
   }
    
 
@@ -219,18 +242,29 @@ margin-left: 190px;
 .story-content {
     padding: 15px;
   }
-  .story-date {
-    display: inline-block;
+  .story-date-1 { 
+    margin-left: 170px;
+   
   width: 180px;
   height: 30px;
   border: none;
   border-radius: 48px;
   color: white;
   background-color: rgb(149, 178, 38);
-  /* text-align: center; */
+  
 
     
   }
+
+  .story-date-2 { 
+   width: 180px;
+  height: 30px;
+  border: none;
+  border-radius: 48px;
+  color: white;
+  background-color: rgb(149, 178, 38);
+  }
+
   .story-content h2 {
     font-size: 1.2rem;
     margin: 10px 0;
@@ -242,18 +276,17 @@ margin-left: 190px;
     color: #666;
   }
   .btn-6 {
-    flex-direction: row;
+    
     width: 197px;
     height: 50px;
-    position: static;
     background: #333;
     color: white;
     border: none;
     border-radius: 10px;
     font-size: 1.25rem;
-    margin-top: 20px;
-    margin-left: 700px; 
-    margin-bottom: 50px;
+    margin: 20px, auto;
+    display: block;
+    
   }
   
   .btn-6:hover {
@@ -262,27 +295,21 @@ margin-left: 190px;
 
   /* footer */
   .footer {
-    position: absolute;
-    width: 100%;
-    height: 520px;
     background-color: #01ACFD;
     color: white;
-    
-    /* padding: 40px 20px; */
+    padding: 40px 20px;
   }
   .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     flex-wrap: wrap;
-    margin-top: 150px;
-    gap: 70px;
+    
   }
   .footer-section {
     flex: 1;
-    margin: 0 20px;
+    text-align: left;
     min-width: 250px;
   }
   
@@ -331,23 +358,36 @@ margin-left: 190px;
 
   /* responsive */
 
-  @media  screen and (max-width:600px)  {
-    .navbar, 
+  @media  screen and (max-width:768px)  {
+    /* .navbar,  */
     .boy,
     .cards,
     .stories-section,
     .footer
+    
     {
-      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      
     }
-  }
-  @media  screen and (min-width:601px) and (max-width: 768px) {
-    .navbar, 
-    .boy,
-    .cards,
-    .stories-section,
-    .footer{
-      width: 100%;
+    .navbar{
+      
+      text-align: center;
+    }
+    .nav-links{
+      display: none;
+    }
+    .size-6{
+      display: block;
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      top: 55px;
+    right: 10px;
+    }
+    .schl{
+      margin-right: 1300px;
     }
   }
  
+  
